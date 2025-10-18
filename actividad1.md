@@ -29,13 +29,20 @@ Modelo de Calidad: ISO/IEC 25010
 Características principales evaluadas por ISO/IEC 25010:
 
 ## Características evaluadas
-Funcionalidad: La web cumple con los requisitos y funciones esperadas.
-Usabilidad: Facilidad de uso para los usuarios finales.
-Fiabilidad: La web funciona correctamente bajo diferentes condiciones.
-Eficiencia: Buen rendimiento y uso de recursos.
-Mantenibilidad: Facilidad para actualizar y corregir errores.
-Portabilidad: Adaptabilidad a diferentes entornos y dispositivos.
-Seguridad: Protección de datos y usuarios.
+##Funcionalidad: 
+La web cumple con los requisitos y funciones esperadas.
+##Usabilidad: 
+Facilidad de uso para los usuarios finales.
+##Fiabilidad: 
+La web funciona correctamente bajo diferentes condiciones.
+##Eficiencia:
+Buen rendimiento y uso de recursos.
+##Mantenibilidad:
+Facilidad para actualizar y corregir errores.
+##Portabilidad: 
+Adaptabilidad a diferentes entornos y dispositivos.
+##Seguridad: 
+Protección de datos y usuarios.
 
 ## Justificación
 ISO/IEC 25010 es adecuado para aplicaciones web porque:
