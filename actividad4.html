@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEISON GONZALEZ, ANDREA OSORIO </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow-x: hidden;
+        }
+
+        .presentation-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            margin: 30px 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.6s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #f093fb;
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.6em;
+            margin: 25px 0 15px 0;
+        }
+
+        h4 {
+            color: #4a5568;
+            font-size: 1.3em;
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            font-size: 1.3em;
+            margin-top: -10px;
+            margin-bottom: 30px;
+        }
+
+        .author-info {
+            text-align: center;
+            margin-top: 40px;
+            color: #718096;
+            font-style: italic;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .card-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .model-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .model-box h3 {
+            color: white;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .model-box p, .model-box ul {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .example-box {
+            background: #f7fafc;
+            border: 2px dashed #667eea;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .example-box h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #68d391;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+            box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-size: 1.1em;
+        }
+
+        .comparison-table td {
+            padding: 15px 18px;
+            border-bottom: 1px solid #e2e8f0;
+            background: white;
+        }
+
+        .comparison-table tr:hover td {
+            background: #f7fafc;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -43px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        .tool-demo {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 10px 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .metric-card {
+            text-align: center;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-number {
+            font-size: 3em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .metric-label {
+            color: #718096;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: white;
+            padding: 15px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cbd5e0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: #667eea;
+            transform: scale(1.3);
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #f093fb;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 5px;
+            font-weight: bold;
+        }
+
+        .process-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .process-step {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+            border-radius: 12px;
+            margin: 10px;
+            position: relative;
+        }
+
+        .process-step::after {
+            content: '→';
+            position: absolute;
+            right: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2em;
+            color: #667eea;
+        }
+
+        .process-step:last-child::after {
+            content: '';
+        }
+
+        .alert-info {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .alert-success {
+            background: #f0fff4;
+            border-left: 4px solid #48bb78;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        
+        <!-- SLIDE 1: PORTADA -->
+        <div class="slide">
+            <div class="logo">🎯</div>
+            <h1>Modelos de Calidad de Software</h1>
+            <p class="subtitle">Fundamentos, Normas y Herramientas para la Excelencia en Desarrollo</p>
+            <div class="author-info">
+                <p><strong>Presentación Profesional</strong></p>
+                <p>Octubre 2025</p>
+            </div>
+            <div class="grid-container" style="margin-top: 50px;">
+                <div class="metric-card">
+                    <div class="metric-number">100%</div>
+                    <div class="metric-label">Calidad</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">ISO</div>
+                    <div class="metric-label">Estándares</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">∞</div>
+                    <div class="metric-label">Mejora Continua</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: INTRODUCCIÓN A MODELOS DE CALIDAD -->
+        <div class="slide">
+            <h2>📋 ¿Qué son los Modelos de Calidad de Software?</h2>
+            
+            <p>Los <span class="highlight">modelos de calidad de software</span> son frameworks estructurados que definen características, criterios y métricas para evaluar y garantizar la calidad de los productos de software.</p>
+
+            <div class="alert-info">
+                <h4>🎯 Objetivo Principal</h4>
+                <p>Proporcionar un marco de referencia sistemático para medir, evaluar y mejorar la calidad del software en todas sus dimensiones.</p>
+            </div>
+
+            <h3>Componentes Fundamentales</h3>
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-icon">🔍</div>
+                    <h4>Características</h4>
+                    <p>Atributos que determinan la calidad (funcionalidad, usabilidad, eficiencia)</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h4>Métricas</h4>
+                    <p>Indicadores cuantitativos para medir cada característica</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">✅</div>
+                    <h4>Criterios</h4>
+                    <p>Estándares y umbrales de aceptación</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h4>Procesos</h4>
+                    <p>Metodologías para implementar y evaluar la calidad</p>
+                </div>
+            </div>
+
+            <h3>Importancia en la Industria</h3>
+            <ul>
+                <li><strong>Reducción de costos:</strong> Detectar errores tempranamente es hasta 100x más económico</li>
+                <li><strong>Satisfacción del cliente:</strong> Software que cumple expectativas genera confianza</li>
+                <li><strong>Competitividad:</strong> La calidad es diferenciador en el mercado</li>
+                <li><strong>Mantenibilidad:</strong> Código de calidad es más fácil de evolucionar</li>
+            </ul>
+        </div>
+
+        <!-- SLIDE 3: TIPOS DE MODELOS DE CALIDAD -->
+        <div class="slide">
+            <h2>🎨 Tipos de Modelos de Calidad de Software</h2>
+
+            <div class="model-box">
+                <h3>1️⃣ ISO/IEC 25010 (SQuaRE)</h3>
+                <p><strong>Sistema de Calidad de Producto y Evaluación</strong></p>
+                <p>Modelo más actualizado y completo para calidad de software y sistemas.</p>
+                
+                <h4 style="color: white; margin-top: 20px;">📦 Calidad del Producto (8 Características)</h4>
+                <ul>
+                    <li><strong>Funcionalidad:</strong> Completitud, corrección, pertinencia</li>
+                    <li><strong>Eficiencia de desempeño:</strong> Tiempo, recursos, capacidad</li>
+                    <li><strong>Compatibilidad:</strong> Coexistencia e interoperabilidad</li>
+                    <li><strong>Usabilidad:</strong> Reconocibilidad, aprendizaje, operabilidad</li>
+                    <li><strong>Fiabilidad:</strong> Madurez, disponibilidad, tolerancia a fallos</li>
+                    <li><strong>Seguridad:</strong> Confidencialidad, integridad, autenticidad</li>
+                    <li><strong>Mantenibilidad:</strong> Modularidad, reusabilidad, analizabilidad</li>
+                    <li><strong>Portabilidad:</strong> Adaptabilidad, instalabilidad, reemplazabilidad</li>
+                </ul>
+            </div>
+
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-icon">📐</div>
+                    <h4>ISO/IEC 9126</h4>
+                    <p><strong>Predecesor de ISO 25010</strong></p>
+                    <p>Define 6 características principales de calidad. Aunque obsoleto, sentó las bases del modelo actual.</p>
+                    <span class="badge">Legacy</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🏆</div>
+                    <h4>CMMI</h4>
+                    <p><strong>Capability Maturity Model Integration</strong></p>
+                    <p>Modelo de madurez con 5 niveles: Inicial, Gestionado, Definido, Cuantitativamente Gestionado, Optimizado.</p>
+                    <span class="badge">Procesos</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h4>McCall</h4>
+                    <p><strong>Modelo Clásico</strong></p>
+                    <p>Enfoque en 3 perspectivas: Operación del producto, Revisión del producto, Transición del producto.</p>
+                    <span class="badge">Histórico</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h4>Boehm</h4>
+                    <p><strong>Modelo Jerárquico</strong></p>
+                    <p>Calidad estructurada en características de alto nivel que se descomponen en subcaracterísticas.</p>
+                    <span class="badge">Académico</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h4>FURPS</h4>
+                    <p><strong>Functionality, Usability, Reliability, Performance, Supportability</strong></p>
+                    <p>Modelo pragmático de Hewlett-Packard enfocado en requisitos.</p>
+                    <span class="badge">Industrial</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌟</div>
+                    <h4>Six Sigma</h4>
+                    <p><strong>Metodología DMAIC</strong></p>
+                    <p>Enfoque estadístico para reducir defectos a 3.4 por millón de oportunidades.</p>
+                    <span class="badge">Estadístico</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: COMPARACIÓN DETALLADA -->
+        <div class="slide">
+            <h2>📊 Comparación entre Modelos de Calidad</h2>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Enfoque Principal</th>
+                        <th>Características Clave</th>
+                        <th>Mejor Aplicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ISO/IEC 25010</strong></td>
+                        <td>Calidad de producto y uso</td>
+                        <td>8 características, 31 subcaracterísticas</td>
+                        <td>Evaluación completa de productos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CMMI</strong></td>
+                        <td>Madurez de procesos</td>
+                        <td>5 niveles de madurez</td>
+                        <td>Mejora organizacional</td>
+                    </tr>
+                    <tr>
+                        <td><strong>McCall</strong></td>
+                        <td>Factores de calidad</td>
+                        <td>11 factores, 3 perspectivas</td>
+                        <td>Sistemas tradicionales</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Six Sigma</strong></td>
+                        <td>Reducción de defectos</td>
+                        <td>DMAIC, métodos estadísticos</td>
+                        <td>Control de calidad cuantitativo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FURPS</strong></td>
+                        <td>Requisitos de calidad</td>
+                        <td>5 categorías principales</td>
+                        <td>Definición de requisitos</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert-success">
+                <h4>💡 Recomendación</h4>
+                <p>Los modelos no son mutuamente excluyentes. Muchas organizaciones combinan <strong>ISO/IEC 25010</strong> para calidad de producto con <strong>CMMI</strong> para madurez de procesos.</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: NORMAS QUE REGULAN LA CALIDAD -->
+        <div class="slide">
+            <h2>📜 Normas que Regulan la Calidad de Software</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>ISO/IEC 25000 - SQuaRE</h3>
+                    <p><strong>Software Quality Requirements and Evaluation</strong></p>
+                    <p>Familia de normas que reemplaza a ISO/IEC 9126 y 14598. Incluye:</p>
+                    <ul>
+                        <li><strong>ISO/IEC 25010:</strong> Modelo de calidad</li>
+                        <li><strong>ISO/IEC 25020:</strong> Modelo de medición</li>
+                        <li><strong>ISO/IEC 25040:</strong> Proceso de evaluación</li>
+                        <li><strong>ISO/IEC 25051:</strong> Requisitos para software empaquetado</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>ISO/IEC 9001</h3>
+                    <p><strong>Sistemas de Gestión de Calidad</strong></p>
+                    <p>Norma genérica aplicable a cualquier organización. Define requisitos para sistemas de gestión de calidad basados en principios como enfoque al cliente, liderazgo y mejora continua.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>ISO/IEC 12207</h3>
+                    <p><strong>Procesos del Ciclo de Vida del Software</strong></p>
+                    <p>Establece un marco común para procesos del ciclo de vida del software con terminología bien definida. Incluye procesos de desarrollo, operación y mantenimiento.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>ISO/IEC 15504 (SPICE)</h3>
+                    <p><strong>Software Process Improvement and Capability Determination</strong></p>
+                    <p>Framework para evaluación de procesos de software. Define modelo de capacidad de procesos en 6 niveles (0-5).</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>ISO/IEC 27001</h3>
+                    <p><strong>Seguridad de la Información</strong></p>
+                    <p>Especifica requisitos para establecer, implementar, mantener y mejorar un sistema de gestión de seguridad de la información (SGSI).</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>IEEE 730</h3>
+                    <p><strong>Software Quality Assurance Processes</strong></p>
+                    <p>Estándar del IEEE que define procesos para aseguramiento de la calidad del software, incluyendo planificación, evaluación y mejora.</p>
+                </div>
+            </div>
+
+            <div class="model-box">
+                <h3>🌍 Normas Regionales y Sectoriales</h3>
+                <ul>
+                    <li><strong>FDA 21 CFR Part 11:</strong> Software para industria farmacéutica (USA)</li>
+                    <li><strong>IEC 62304:</strong> Software de dispositivos médicos</li>
+                    <li><strong>DO-178C:</strong> Software aeronáutico</li>
+                    <li><strong>ISO 26262:</strong> Software automotriz (seguridad funcional)</li>
+                    <li><strong>PCI DSS:</strong> Software que maneja tarjetas de pago</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: HERRAMIENTAS PARA GESTIÓN DE CALIDAD -->
+        <div class="slide">
+            <h2>🛠️ Herramientas para la Gestión de la Calidad de Software</h2>
+
+            <h3>Categorías de Herramientas</h3>
+
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-icon">🧪</div>
+                    <h4>Pruebas Automatizadas</h4>
+                    <ul style="text-align: left; margin-top: 10px;">
+                        <li>Selenium</li>
+                        <li>JUnit / TestNG</li>
+                        <li>Cypress</li>
+                        <li>Jest</li>
+                        <li>PyTest</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔍</div>
+                    <h4>Análisis Estático</h4>
+                    <ul style="text-align: left; margin-top: 10px;">
+                        <li>SonarQube</li>
+                        <li>ESLint</li>
+                        <li>Checkstyle</li>
+                        <li>PMD</li>
+                        <li>Coverity</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h4>Gestión de Calidad</h4>
+                    <ul style="text-align: left; margin-top: 10px;">
+                        <li>Jira</li>
+                        <li>TestRail</li>
+                        <li>Zephyr</li>
+                        <li>Quality Center</li>
+                        <li>Azure DevOps</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h4>Rendimiento</h4>
+                    <ul style="text-align: left; margin-top: 10px;">
+                        <li>JMeter</li>
+                        <li>LoadRunner</li>
+                        <li>Gatling</li>
+                        <li>New Relic</li>
+                        <li>Dynatrace</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h4>Seguridad</h4>
+                    <ul style="text-align: left; margin-top: 10px;">
+                        <li>OWASP ZAP</li>
+                        <li>Snyk</li>
+                        <li>Burp Suite</li>
+                        <li>Fortify</li>
+                        <li>Veracode</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h4>CI/CD</h4>
+                    <ul style="text-align: left; margin-top: 10px;">
+                        <li>Jenkins</li>
+                        <li>GitLab CI</li>
+                        <li>GitHub Actions</li>
+                        <li>CircleCI</li>
+                        <li>Travis CI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 7: EJEMPLO PRÁCTICO - SONARQUBE -->
+        <div class="slide">
+            <h2>💻 Ejemplo Práctico: SonarQube</h2>
+
+            <div class="alert-info">
+                <h4>📌 ¿Qué es SonarQube?</h4>
+                <p>SonarQube es una plataforma líder de código abierto para inspección continua de la calidad del código. Detecta bugs, vulnerabilidades de seguridad, code smells y mide cobertura de pruebas.</p>
+            </div>
+
+            <h3>Características Principales</h3>
+            <div class="grid-container">
+                <div class="metric-card">
+                    <div class="metric-number">29+</div>
+                    <div class="metric-label">Lenguajes Soportados</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">5000+</div>
+                    <div class="metric-label">Reglas de Análisis</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">A-E</div>
+                    <div class="metric-label">Sistema de Calificación</div>
+                </div>
+            </div>
+
+            <h3>Instalación y Configuración</h3>
+            <div class="tool-demo">
+                <h4>Paso 1: Instalación con Docker</h4>
+                <div class="code-block">
+# Descargar e iniciar SonarQube
+docker pull sonarqube:latest
+docker run -d --name sonarqube -p 9000:9000 sonarqube:latest
+
+# Acceder a http://localhost:9000
+# Usuario por defecto: admin / admin
+                </div>
+
+                <h4>Paso 2: Configurar proyecto</h4>
+                <div class="code-block">
+# Crear archivo sonar-project.properties
+sonar.projectKey=mi-proyecto
+sonar.projectName=Mi Proyecto de Calidad
+sonar.projectVersion=1.0
+sonar.sources=src
+sonar.language=java
+sonar.sourceEncoding=UTF-8
+sonar.java.binaries=target/classes
+                </div>
+
+                <h4>Paso 3: Ejecutar análisis</h4>
+                <div class="code-block">
+# Instalar SonarScanner
+npm install -g sonarqube-scanner
+
+# Ejecutar análisis
+sonar-scanner \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=tu-token-aqui
+                </div>
+            </div>
+
+            <h3>Métricas que Analiza SonarQube</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Métrica</th>
+                        <th>Descripción</th>
+                        <th>Objetivo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Bugs</strong></td>
+                        <td>Errores de código que pueden causar comportamiento incorrecto</td>
+                        <td>0 bugs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vulnerabilidades</strong></td>
+                        <td>Problemas de seguridad que pueden ser explotados</td>
+                        <td>0 vulnerabilidades</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Code Smells</strong></td>
+                        <td>Problemas de mantenibilidad que dificultan evolución</td>
+                        <td>Calificación A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cobertura</strong></td>
+                        <td>Porcentaje de código cubierto por pruebas</td>
+                        <td>> 80%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Duplicación</strong></td>
+                        <td>Porcentaje de código duplicado</td>
+                        <td>< 3%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Complejidad Ciclomática</strong></td>
+                        <td>Número de caminos independientes en el código</td>
+                        <td>< 10 por método</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SLIDE 8: CASO PRÁCTICO COMPLETO -->
+        <div class="slide">
+            <h2>🎯 Caso Práctico: Implementación de Calidad en Proyecto Real</h2>
+
+            <div class="example-box">
+                <h4>📋 Escenario</h4>
+                <p>Empresa de e-commerce con aplicación web que presenta:</p>
+                <ul>
+                    <li>Frecuentes bugs en producción (15 bugs/semana)</li>
+                    <li>Tiempo de respuesta lento (3-5 segundos)</li>
+                    <li>Baja cobertura de pruebas (35%)</li>
+                    <li>Código difícil de mantener</li>
+                </ul>
+            </div>
+
+            <h3>Implementación del Modelo de Calidad ISO/IEC 25010</h3>
+
+            <div class="process-flow">
+                <div class="process-step">
+                    <strong>1. Diagnóstico</strong>
+                    <p>Auditoría inicial</p>
+                </div>
+                <div class="process-step">
+                    <strong>2. Planificación</strong>
+                    <p>Definir objetivos</p>
+                </div>
+                <div class="process-step">
+                    <strong>3. Implementación</strong>
+                    <p>Herramientas y procesos</p>
+                </div>
+                <div class="process-step">
+                    <strong>4. Medición</strong>
+                    <p>KPIs y métricas</p>
+                </div>
+                <div class="process-step">
+                    <strong>5. Mejora</strong>
+                    <p>Ciclo continuo</p>
+                </div>
+            </div>
+
+            <h3>Herramientas Implementadas</h3>
+            <div class="tool-demo">
+                <h4>Stack de Calidad Completo</h4>
+                
+                <div class="code-block">
+# 1. SonarQube - Análisis estático de código
+sonar.projectKey=ecommerce-app
+sonar.coverage.jacoco.xmlReportPaths=coverage/jacoco.xml
+sonar.qualitygate.wait=true
+
+# 2. Pipeline CI/CD con GitHub Actions
+name: Quality Check
+on: [push, pull_request]
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run tests
+        run: npm test -- --coverage
+      - name: SonarQube Scan
+        uses: sonarsource/sonarqube-scan-action@master
+      - name: OWASP Security Check
+        run: npm audit
+      - name: Performance Test
+        run: npm run test:performance
+                </div>
+
+                <h4>Configuración de Pruebas Automatizadas (Jest + Cypress)</h4>
+                <div class="code-block">
+// jest.config.js - Pruebas unitarias
+module.exports = {
+  collectCoverage: true,
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80
+    }
+  },
+  testMatch: ['**/__tests__/**/*.test.js']
+};
+
+// cypress.config.js - Pruebas E2E
+module.exports = {
+  e2e: {
+    baseUrl: 'http://localhost:3000',
+    video: true,
+    screenshotOnRunFailure: true
+  }
+};
+                </div>
+
+                <h4>Ejemplo de Prueba Automatizada</h4>
+                <div class="code-block">
+// __tests__/checkout.test.js
+describe('Checkout Process', () => {
+  test('should complete purchase successfully', async () => {
+    // Arrange
+    const cart = { items: [{ id: 1, quantity: 2 }] };
+    const user = { id: 123, email: 'test@example.com' };
+    
+    // Act
+    const result = await checkout.process(cart, user);
+    
+    // Assert
+    expect(result.status).toBe('success');
+    expect(result.orderId).toBeDefined();
+    expect(result.total).toBeGreaterThan(0);
+  });
+  
+  test('should handle payment failure', async () => {
+    const cart = { items: [{ id: 1, quantity: 1 }] };
+    const invalidCard = { number: '0000000000000000' };
+    
+    await expect(
+      checkout.processPayment(cart, invalidCard)
+    ).rejects.toThrow('Payment failed');
+  });
+});
+                </div>
+            </div>
+
+            <h3>Resultados Después de 6 Meses</h3>
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-icon">🐛</div>
+                    <h4>Bugs Reducidos</h4>
+                    <p><strong>De 15/semana → 2/semana</strong></p>
+                    <p style="color: #48bb78;">▼ 87% reducción</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h4>Rendimiento</h4>
+                    <p><strong>De 3-5s → 0.8s</strong></p>
+                    <p style="color: #48bb78;">▼ 75% mejora</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">✅</div>
+                    <h4>Cobertura</h4>
+                    <p><strong>De 35% → 85%</strong></p>
+                    <p style="color: #48bb78;">▲ 143% aumento</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💰</div>
+                    <h4>ROI</h4>
+                    <p><strong>Ahorro $120K/año</strong></p>
+                    <p style="color: #48bb78;">En corrección de bugs</p>
+                </div>
+            </div>
+
+            <div class="alert-success">
+                <h4>🏆 Lecciones Aprendidas</h4>
+                <ul>
+                    <li>La automatización es clave para mantener calidad consistente</li>
+                    <li>Las métricas deben revisarse semanalmente en retrospectivas</li>
+                    <li>La capacitación del equipo en herramientas es fundamental</li>
+                    <li>Quality Gates en CI/CD evitan que código defectuoso llegue a producción</li>
+                    <li>La inversión en calidad se recupera en 3-4 meses</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SLIDE 9: MEJORES PRÁCTICAS -->
+        <div class="slide">
+            <h2>⭐ Mejores Prácticas en Gestión de Calidad</h2>
+
+            <div class="model-box">
+                <h3>🎯 Principios Fundamentales</h3>
+                <ul>
+                    <li><strong>Shift-Left Testing:</strong> Pruebas tempranas en el ciclo de desarrollo</li>
+                    <li><strong>Automatización:</strong> 80% de pruebas repetitivas automatizadas</li>
+                    <li><strong>Continuous Quality:</strong> Integración de calidad en CI/CD</li>
+                    <li><strong>Culture of Quality:</strong> Todos son responsables, no solo QA</li>
+                </ul>
+            </div>
+
+            <h3>Estrategia de Pruebas Piramidal</h3>
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-icon">🔬</div>
+                    <h4>Unitarias (70%)</h4>
+                    <p>Rápidas, aisladas, abundantes</p>
+                    <ul style="text-align: left; margin-top: 10px;">
+                        <li>JUnit, PyTest, Jest</li>
+                        <li>Cobertura > 80%</li>
+                        <li>Ejecución < 10 min</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔗</div>
+                    <h4>Integración (20%)</h4>
+                    <p>Verificar interacciones entre componentes</p>
+                    <ul style="text-align: left; margin-top: 10px;">
+                        <li>APIs, Bases de datos</li>
+                        <li>Contratos entre servicios</li>
+                        <li>TestContainers</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🖥️</div>
+                    <h4>E2E (10%)</h4>
+                    <p>Flujos completos de usuario</p>
+                    <ul style="text-align: left; margin-top: 10px;">
+                        <li>Selenium, Cypress</li>
+                        <li>Escenarios críticos</li>
+                        <li>Smoke tests</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Checklist de Calidad</h3>
+            <div class="example-box">
+                <h4>✅ Antes de Cada Release</h4>
+                <ul>
+                    <li>☑️ Todas las pruebas unitarias pasan (verde)</li>
+                    <li>☑️ Cobertura de código ≥ 80%</li>
+                    <li>☑️ Sin vulnerabilidades críticas o altas</li>
+                    <li>☑️ SonarQube Quality Gate: PASSED</li>
+                    <li>☑️ Sin code smells bloqueantes</li>
+                    <li>☑️ Duplicación de código < 3%</li>
+                    <li>☑️ Pruebas de rendimiento aprobadas</li>
+                    <li>☑️ Revisión de código completada (2+ aprobaciones)</li>
+                    <li>☑️ Documentación actualizada</li>
+                    <li>☑️ Logs de errores monitorizados</li>
+                </ul>
+            </div>
+
+            <h3>KPIs de Calidad a Monitorizar</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>KPI</th>
+                        <th>Métrica</th>
+                        <th>Objetivo</th>
+                        <th>Frecuencia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Defect Density</strong></td>
+                        <td>Bugs / 1000 líneas de código</td>
+                        <td>< 1</td>
+                        <td>Semanal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mean Time to Repair</strong></td>
+                        <td>Tiempo promedio para resolver bugs</td>
+                        <td>< 24h (críticos)</td>
+                        <td>Diaria</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Test Pass Rate</strong></td>
+                        <td>% de pruebas exitosas</td>
+                        <td>> 95%</td>
+                        <td>Por build</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Code Review Coverage</strong></td>
+                        <td>% de commits revisados</td>
+                        <td>100%</td>
+                        <td>Diaria</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Technical Debt Ratio</strong></td>
+                        <td>Costo de remediación / Costo de desarrollo</td>
+                        <td>< 5%</td>
+                        <td>Mensual</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SLIDE 10: CONCLUSIONES -->
+        <div class="slide">
+            <h2>🎓 Conclusiones</h2>
+
+            <div class="alert-success">
+                <h3>🌟 Puntos Clave</h3>
+                <ul>
+                    <li><strong>La calidad no es opcional:</strong> Es un diferenciador competitivo esencial en el mercado actual</li>
+                    <li><strong>Los modelos proporcionan estructura:</strong> ISO/IEC 25010, CMMI y otros dan frameworks probados</li>
+                    <li><strong>Las normas garantizan consistencia:</strong> Seguir estándares internacionales asegura calidad reconocida</li>
+                    <li><strong>Las herramientas automatizan:</strong> SonarQube, Jenkins, Selenium permiten calidad continua y escalable</li>
+                </ul>
+            </div>
+
+            <h3>Evolución de la Calidad en el Desarrollo</h3>
+            <div class="model-box">
+                <h4 style="color: white;">Del Pasado al Presente</h4>
+                <p><strong>Antes:</strong> Testing manual al final del desarrollo → Costoso y tardío</p>
+                <p><strong>Ahora:</strong> Calidad continua integrada en todo el ciclo → Preventivo y eficiente</p>
+                <p><strong>Futuro:</strong> IA y ML para predicción y corrección automática de defectos</p>
+            </div>
+
+            <h3>Recomendaciones Finales</h3>
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h4>Para Principiantes</h4>
+                    <p>Comienza con ISO/IEC 25010 y SonarQube. Establece métricas básicas y cultura de calidad.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h4>Para Equipos Intermedios</h4>
+                    <p>Implementa CMMI nivel 3, automatización completa de pruebas y CI/CD con quality gates.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏆</div>
+                    <h4>Para Organizaciones Avanzadas</h4>
+                    <p>Six Sigma, certificaciones ISO, DevSecOps y monitorización predictiva con IA.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>💡 Reflexión Final</h4>
+                <p style="font-size: 1.2em; font-style: italic; color: #667eea;">
+                    "La calidad nunca es un accidente; siempre es el resultado de un esfuerzo inteligente." - John Ruskin
+                </p>
+                <p style="margin-top: 20px;">
+                    Invertir en calidad es invertir en la sostenibilidad del negocio. Los costos iniciales se recuperan rápidamente a través de menor deuda técnica, mayor satisfacción del cliente y equipos más productivos.
+                </p>
+            </div>
+
+            <h3 style="text-align: center; margin-top: 50px;">📊 Recursos Adicionales</h3>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://www.iso.org/standard/35733.html" class="btn">ISO/IEC 25010</a>
+                <a href="https://www.sonarqube.org/" class="btn">SonarQube</a>
+                <a href="https://cmmiinstitute.com/" class="btn">CMMI Institute</a>
+                <a href="https://www.selenium.dev/" class="btn">Selenium</a>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px; padding: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; color: white;">
+                <h2 style="color: white; border: none;">¡Gracias por su atención!</h2>
+                <p style="font-size: 1.3em; margin-top: 20px; color: white;">FIN</p>
+                <div class="logo" style="margin-top: 20px;">🎯✨</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+    </div>
+
+    <script>
+        // Smooth scroll y animaciones
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const navBtns = document.querySelectorAll('.nav-btn');
+
+            // Observador para animaciones al hacer scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            slides.forEach(slide => observer.observe(slide));
+
+            // Navegación con puntos
+            navBtns.forEach((btn, index) => {
+                btn.addEventListener('click', () => {
+                    slides[index].scrollIntoView({ behavior: 'smooth' });
+                    navBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                });
+            });
+
+            // Actualizar navegación al hacer scroll
+            window.addEventListener('scroll', () => {
+                let current = 0;
+                slides.forEach((slide, index) => {
+                    const rect = slide.getBoundingClientRect();
+                    if (rect.top <= 150 && rect.bottom >= 150) {
+                        current = index;
+                    }
+                });
+                navBtns.forEach((btn, index) => {
+                    btn.classList.toggle('active', index === current);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
