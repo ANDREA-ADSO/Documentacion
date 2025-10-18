@@ -1,31 +1,15 @@
-HOJA DE RESUMEN Y PUNTUACIÓN
-Fecha de Evaluación: ______________
-Producto Evaluado: ______________
-Versión: ______________
-Evaluador(es): ______________
-
-Resultados por Característica:
-Característica	% Cumplimiento	Puntuación (1-10)
-Funcionalidad		
-Fiabilidad		
-Usabilidad		
-Rendimiento		
-Mantenibilidad		
-Portabilidad		
-Compatibilidad		
-Seguridad		
-Puntuación Total: ___ / 80 puntos
-Recomendaciones y Acciones Prioritarias:
-Críticas (deben resolverse antes del despliegue):
--
--
-
-Importantes (resolver en la siguiente iteración):
--
--
-
-Mejoras (implementar en futuras versiones):
+Checklist de Calidad
+Servicio Nacional de Aprendizaje
+Objetivo: Crear checklist basada en ISO 25010
+Descripción:
+● Crear un formulario de Google Forms
+● Diseñar checklist con criterios de calidad
+● Implementar para un proyecto ficticio
+● Generar reportes automáticos
 
 
-Documentacion 
-https://docs.google.com/spreadsheets/d/1hatQmm6rjIrE-4-waqkAN3-KmrQuCIYtNduJaSdARtM/edit?usp=drive_link
+Objetivo:
+Diseñar e implementar un checklist de calidad basado en ISO 25010 mediante Google Forms, aplicándolo a un proyecto ficticio y generando reportes automáticos.
+
+
+docs.google.com/forms/d/1SGg9Tkrx8VoOYkzT3q1CZWep6-Jua8khoKOzrkafwH0/edit   

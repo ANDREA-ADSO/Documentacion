@@ -1,1 +1,0 @@
-yeygok el mejor

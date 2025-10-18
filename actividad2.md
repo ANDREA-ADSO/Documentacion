@@ -1,25 +1,24 @@
-Actividad 2: Documentación con Herramientas en Línea
-
+Actividad 2: Documentación con
+Herramientas en Línea
 Servicio Nacional de Aprendizaje
-Yuly Osorio, Yeison Gonzalez
-
 Objetivo: Crear documentación de calidad usando
 herramientas colaborativas
 Descripción:
-● Crear un repositorio en GitHub/GitLab
-
-https://github.com/ANDREA-ADSO/Documentacion.git
-
-● Documentar un proceso de testing usando wiki o pages
-
-https://drive.google.com/drive/folders/17zZffPRT-WPh9vLLhgG13uVHfJz_ky3F?usp=sharing
-
-● Crear diagramas de flujo del proceso con Draw.io
+1 Crear un repositorio en GitHub/GitLab
+2 Documentar un proceso de testing usando wiki o pages
+3 Crear diagramas de flujo del proceso con Draw.io
+4 Establecer un board de Trello para seguimiento
 
 
+Objetivo
 
-● Establecer un board de Trello para seguimiento
+Los participantes deben crear un repositorio en GitHub o GitLab, documentar el proceso de testing mediante wiki o Pages, diseñar diagramas de flujo con Draw.io y organizar tareas en un tablero de Trello. Al final, deben entregar el repositorio con la documentación, los diagramas del proceso y el board de Trello con las actividades registradas.
 
-https://trello.com/invite/b/688fb7823b0f2bffa571717a/ATTI455585fea037458e7f4db8e8f8cead16C30DA117/mi-tablero-de-trello
+1. https://github.com/ANDREA-ADSO/Documentacion.git
+2. https://docs.google.com/document/d/12rWTTECgvUOEMs3dKLsrz8q4opxi2HDet9LbAMMMU4Q/edit?usp=sharing
+3. https://drive.google.com/file/d/1qf_OU7TZSn-BeUYsehEcuyd9nYJvKsf0/view?usp=sharing
+4. https://trello.com/b/nSjnLU6s/mi-tablero-de-trello
 
----
+
+
+
